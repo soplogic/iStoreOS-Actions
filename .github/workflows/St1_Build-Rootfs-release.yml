@@ -77,9 +77,9 @@ jobs:
 
     - name: ⏬ 复制并设置必备文件
       run: |
-        cp arm64/{build24.sh,Makefile} imagebuilder/
-        #cp arm64/repositories.conf imagebuilder/
-        cp shell/{prepare-packages.sh,custom-packages.sh} imagebuilder/
+        cp arm64/build24.sh imagebuilder/
+        #cp arm64/{Makefile,repositories.conf} imagebuilder/
+        cp shell/*-packages.sh imagebuilder/
         find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
         
         mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
@@ -105,8 +105,8 @@ jobs:
         tree -L 1
         echo "打印repositories"
         cat repositories.conf
-        echo "打印Makefile"
-        cat Makefile |grep here
+        #echo "打印Makefile"
+        #cat Makefile |grep here
         bash ./build24.sh
 
     - name: 📦 打印产出rootfs
