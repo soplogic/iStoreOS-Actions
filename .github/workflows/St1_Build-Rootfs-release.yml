@@ -83,11 +83,13 @@ jobs:
         find files/packages/ -name "*.ipk" -exec cp {} imagebuilder/packages/ \;
         
         mkdir -p imagebuilder/files/etc/{uci-defaults,banner1}
-        #添加开机启动脚本
+        # 添加开机启动脚本
         cp files/etc/uci-defaults/99-custom.sh imagebuilder/files/etc/uci-defaults/
-        #替换O大打包脚本的默认banner
+        
+        # 替换O大打包脚本的默认banner
         cp files/etc/banner imagebuilder/files/etc/banner1/
-        #临时解决通过晶晨宝盒写入emmc后根分区变为只读状态问题
+        
+        # 临时处理Amlogic通过宝盒插件写入emmc后，根分区变为只读状态的问题
         cp files/etc/rc.local imagebuilder/files/etc/
         
         cd imagebuilder
@@ -98,7 +100,7 @@ jobs:
         echo "打印action目录结构"
         tree -L 1
 
-    - name: 🧱 构建iStoreOS-rootfs
+    - name: 🧱 构建 iStoreOS-rootfs
       working-directory: ./imagebuilder
       run: |
         echo "打印imagebuilder目录结构"
@@ -109,7 +111,7 @@ jobs:
         #cat Makefile |grep here
         bash ./build24.sh
 
-    - name: 📦 打印产出rootfs
+    - name: 📦 打印产出 Rootfs
       run: |
         echo "打印bin目录"
         ls -lah imagebuilder/bin/targets/armsr/armv8/
