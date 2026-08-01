@@ -244,7 +244,7 @@ on:
         type: boolean
 
 env:
-  VERSION: 24.10.7
+  VERSION: 24.10.8
 
 jobs:
   build:
