@@ -10,7 +10,7 @@ on:
         type: choice
         options:
           - a311d-oes_s922x-oes-plus_wxy-oect
-          - nsy-g16-plus_nsy-g68-plus_bdy-g18-pro
+          - nsy-g16-plus_nsy-g68-plus_bdy-g18-pro_bdy-g98
           - s905d_s905x3_s912_s922x-ct2000
           - a311d
           - a311d-oes
@@ -41,6 +41,7 @@ on:
           - eaidk-610
           - easepi-a2
           - easepi-r2
+          - elfboard-elf2
           - emb3531
           - fine3399
           - firefly-itx-3588j
@@ -51,6 +52,7 @@ on:
           - gea-6319
           - gzpeite-p01
           - h28k
+          - h618-ai-douhe
           - h618-devboard
           - h66k
           - h68k
@@ -59,6 +61,7 @@ on:
           - h88k-v3
           - h96-max-m2
           - hk1-rbox-k8s
+          - houzzkit-f1
           - hs530r
           - ht2
           - hugsun-x99
@@ -96,6 +99,7 @@ on:
           - orangepi-5b
           - orangepi-zero3
           - painet-p3
+          - painet-p5
           - panther-x2
           - photonicat
           - r66s
@@ -224,6 +228,9 @@ on:
           - x88pro20
           - x98h
           - xiaobao
+          - youyeetoo-r1-v3
+          - youyeetoo-yy3568
+          - youyeetoo-yy3588
           - yskj
           - zcube1-max
           - zk-r39a
